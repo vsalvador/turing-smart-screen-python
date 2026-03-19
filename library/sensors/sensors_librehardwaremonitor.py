@@ -430,7 +430,8 @@ class System(sensors.System):
 class Memory(sensors.Memory):
     @staticmethod
     def swap_percent() -> float:
-        memory = get_hw_and_update(Hardware.HardwareType.Memory)
+        ram = get_hw_and_update(Hardware.HardwareType.Memory, "Total Memory")
+        vram = get_hw_and_update(Hardware.HardwareType.Memory, "Virtual Memory")
 
         virtual_mem_used = math.nan
         mem_used = math.nan
@@ -438,19 +439,21 @@ class Memory(sensors.Memory):
         mem_available = math.nan
 
         # Get virtual / physical memory stats
-        for sensor in memory.Sensors:
+        for sensor in ram.Sensors:
             if sensor.SensorType == Hardware.SensorType.Data and str(sensor.Name).startswith(
-                    "Virtual Memory Used") and sensor.Value is not None:
-                virtual_mem_used = int(sensor.Value)
-            elif sensor.SensorType == Hardware.SensorType.Data and str(sensor.Name).startswith(
                     "Memory Used") and sensor.Value is not None:
                 mem_used = int(sensor.Value)
             elif sensor.SensorType == Hardware.SensorType.Data and str(sensor.Name).startswith(
-                    "Virtual Memory Available") and sensor.Value is not None:
-                virtual_mem_available = int(sensor.Value)
-            elif sensor.SensorType == Hardware.SensorType.Data and str(sensor.Name).startswith(
                     "Memory Available") and sensor.Value is not None:
                 mem_available = int(sensor.Value)
+
+        for sensor in vram.Sensors:
+            if sensor.SensorType == Hardware.SensorType.Data and str(sensor.Name).startswith(
+                    "Memory Used") and sensor.Value is not None:
+                virtual_mem_used = int(sensor.Value)
+            elif sensor.SensorType == Hardware.SensorType.Data and str(sensor.Name).startswith(
+                    "Memory Available") and sensor.Value is not None:
+                virtual_mem_available = int(sensor.Value)
 
         # Compute swap stats from virtual / physical memory stats
         swap_used = virtual_mem_used - mem_used
@@ -466,8 +469,8 @@ class Memory(sensors.Memory):
 
     @staticmethod
     def virtual_percent() -> float:
-        memory = get_hw_and_update(Hardware.HardwareType.Memory)
-        for sensor in memory.Sensors:
+        ram = get_hw_and_update(Hardware.HardwareType.Memory, "Total Memory")
+        for sensor in ram.Sensors:
             if sensor.SensorType == Hardware.SensorType.Load and str(sensor.Name).startswith(
                     "Memory") and sensor.Value is not None:
                 return float(sensor.Value)
@@ -476,8 +479,8 @@ class Memory(sensors.Memory):
 
     @staticmethod
     def virtual_used() -> int:  # In bytes
-        memory = get_hw_and_update(Hardware.HardwareType.Memory)
-        for sensor in memory.Sensors:
+        ram = get_hw_and_update(Hardware.HardwareType.Memory, "Total Memory")
+        for sensor in ram.Sensors:
             if sensor.SensorType == Hardware.SensorType.Data and str(sensor.Name).startswith(
                     "Memory Used") and sensor.Value is not None:
                 return int(sensor.Value * 1000000000.0)
@@ -486,8 +489,8 @@ class Memory(sensors.Memory):
 
     @staticmethod
     def virtual_free() -> int:  # In bytes
-        memory = get_hw_and_update(Hardware.HardwareType.Memory)
-        for sensor in memory.Sensors:
+        ram = get_hw_and_update(Hardware.HardwareType.Memory, "Total Memory")
+        for sensor in ram.Sensors:
             if sensor.SensorType == Hardware.SensorType.Data and str(sensor.Name).startswith(
                     "Memory Available") and sensor.Value is not None:
                 return int(sensor.Value * 1000000000.0)
