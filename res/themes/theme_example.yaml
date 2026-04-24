@@ -104,6 +104,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 100
@@ -178,6 +179,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 100
@@ -314,6 +316,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 100
@@ -388,6 +391,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 100
@@ -520,6 +524,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 141
@@ -590,6 +595,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 141
@@ -716,6 +722,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 100
@@ -786,6 +793,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 100
@@ -856,6 +864,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 100
@@ -926,6 +935,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 100
@@ -1172,6 +1182,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 141
@@ -1224,6 +1235,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 141
@@ -1350,6 +1362,7 @@ STATS:
         BAR_OUTLINE: False
         # BACKGROUND_COLOR: 0, 0, 0
         BACKGROUND_IMAGE: background.png
+        REVERSE_DIRECTION: False
       RADIAL:
         SHOW: False
         X: 141
@@ -1825,6 +1838,7 @@ STATS:
       BAR_OUTLINE: False
       # BACKGROUND_COLOR: 0, 0, 0
       BACKGROUND_IMAGE: background.png
+      REVERSE_DIRECTION: False
     RADIAL:
       SHOW: False
       X: 141
